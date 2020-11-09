@@ -40,4 +40,5 @@ pip install package_name
 
 ### Requests
 - Localhost makes an API call to www server
-- 
+- Finds if web is live
+- Handle user as per as per response from web
