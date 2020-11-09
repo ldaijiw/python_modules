@@ -77,3 +77,16 @@ Can extract specific information from result dictionary:
 response_results = response.json()["results"]
 response_results["specific_info"]
 ```
+
+## JSON Basics
+
+JSON is used heavily in the industry for reading/writing/parsing/converting data
+
+- JavaScript Object Notation
+- Use cases - browser data
+- Data is in key value pairs
+- JSON encoding from dictionary
+- JSON decoding into dictionary
+- Handling/creating files with python
+- writing to file
+- reading from file

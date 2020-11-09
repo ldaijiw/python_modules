@@ -32,13 +32,12 @@ def display_response_results(response):
     return response.json()["result"]
 
 
-
-
 def main():
     user_response = postcode_response()
     print(check_response_code(user_response))
     print(display_response_results(user_response))
     print(get_coordinates(user_response))
+
 
 if __name__ == "__main__":
     main()
