@@ -32,7 +32,7 @@ def round_num():
     # simpler method of rounding number
     # return round(num)
 
-    if num - math.floor(num) >= 0.5:
+    if num % 1 >= 0.5:
         return math.ceil(num)
     return math.floor(num)
 
