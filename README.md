@@ -42,3 +42,38 @@ pip install package_name
 - Localhost makes an API call to www server
 - Finds if web is live
 - Handle user as per as per response from web
+
+**HTTP/HTTPS Protocols**
+- GET
+- POST
+- REQUEST
+
+**CRUD**
+- Create
+- Read
+- Update
+- Delete
+
+## Postcode Task
+
+- research how to convert this data into dictionary
+- hint - python json library
+- iterate through data and print results
+- print longitude and latitude
+
+**SOLUTION**
+- 2 Functions
+- ``postcode_response`` to ask user input for postcode and return the response
+- ``get_coordinates`` to extract coordinates (longitude, latitude) from response and return tuple
+
+The datatype of the response is _bytes_. In order to extract the useful information from the response
+
+``response.json()`` converts response into dictionary format with 2 items
+- status: _int_ status code from response
+- result: _dict_ dictionary of all the result contents
+
+Can extract specific information from result dictionary:
+```python
+response_results = response.json()["results"]
+response_results["specific_info"]
+```
