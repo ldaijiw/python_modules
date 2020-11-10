@@ -125,12 +125,43 @@ with open("new_json_file.json", "r") as jsonfile:
 - **+**: Opens file for reading and writing (updating)
 
 
-## Using Try/Except
+## Exception Handling
 
 Can use try/except to attempt to run blocks and perform a different action if an error occurs.
 
 The control flow is as follows:
 - **TRY**: Attempts to execute main block
-- **EXCEPT** _specificError_: If a certain error occurs then executes this block, raising an error
+- **EXCEPT** _specificError_: If a certain error occurs then executes this block, which will ``raise`` an error
 - **ELSE**: If no error occurs then runs this block
 - **FINALLY**: Will execute regardless of success or failure
+
+- Use these blocks when we expect an error or an exception from python interpreter
+- Why: Helps to handle errors or exceptions and add cutomised message as well as make a decision based on the customer needs
+
+
+**exception_handling.py**
+
+Using exception handling to open a file
+
+**Iteration 1**: Using ``try`` and ``except``
+```python
+try:
+    newfile = open("orders.txt")
+except:
+    print("Error loading file")
+
+```
+
+**Iteration 2**: Using ``raise`` and ``finally``
+```python
+try:
+    file = open("orders.txt")
+except FileNotFoundError as errmsg:
+    print(f"Please create a file first\n{errmsg}")
+    
+    # will send back the actual exception
+    raise errmsg
+# finally executes regardless of above conditions
+finally:
+    print("Thank you")
+```
