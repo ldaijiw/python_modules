@@ -26,3 +26,23 @@ with open("new_json_file.json", "r") as jsonfile:
     car = json.load(jsonfile)
     print(type(car))
     print(car["name"])
+
+
+def read_json(filename):
+    # attempts to execute this block first
+    try:
+        with open(filename, "r") as jsonfile:
+            json_dict = json.load(jsonfile)
+    
+    # if type error occurs then runs this block
+    except TypeError as e:
+        print("Wrong type of file loaded")
+        raise e
+    
+    # If no error occurs then executes this block
+    else:
+        print("File successfully read")
+    
+    # runs this block regardless of success or failure
+    finally:
+        print("Thank you for using read_json()")
