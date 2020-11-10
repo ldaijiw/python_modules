@@ -115,6 +115,16 @@ with open("new_json_file.json", "r") as jsonfile:
     car = json.load(jsonfile)
 ```
 
+### JSON Handling Files and Permissions
+- **r**: This is the default mode. It opens file for reading
+- **w**: This mode opens the file for writing, if the file does not exist, it creates a new file, if it does exist then it truncates the file
+- **x**: Creates a new file, if the file already exists then operation fails
+- **a**: Opens file in append mode, if file does not exist, it creates a new file
+- **t**: Default mode, opens in text mode
+- **b**: Opens in binary mode
+- **+**: Opens file for reading and writing (updating)
+
+
 ## Using Try/Except
 
 Can use try/except to attempt to run blocks and perform a different action if an error occurs.
